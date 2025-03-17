@@ -5,13 +5,17 @@
 LSTMs were the first major breakthrough in language modeling. However, due to certain limitations (which will be discussed further), transformers took over. But what if we overcome these limitations?
 Can LSTMs perform better if we scale them to the level of contemporary transformer architectures? And does architecture even matter, or is it all about the number of parameters in the model?
 
-## LSTM: review
 
-TODO
+# Reproduce experiments
 
-## xLSTM: what's new
+Set up the environment:
 
-TODO
+```bash
+conda env create -n xlstm -f environment.yaml 
+conda activate xlstm
+pip install xlstm llm-trainer
+```
+
 
 # References
 

@@ -1,0 +1,20 @@
+    vocab_size: 50257
+    tie_weights: False
+    mlstm_block:
+      mlstm:
+        conv1d_kernel_size: 4
+        qkv_proj_blocksize: 4
+        num_heads: 8
+    slstm_block:
+      slstm:
+        backend: vanilla
+        num_heads: 8
+        conv1d_kernel_size: 4
+        bias_init: powerlaw_blockdependent
+      feedforward:
+        proj_factor: 1.3
+        act_fn: gelu
+    context_length: 256
+    num_blocks: 24
+    embedding_dim: 640
+    slstm_at: []

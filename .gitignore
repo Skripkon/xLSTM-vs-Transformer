@@ -1,0 +1,11 @@
+# Virtual env
+.venv
+
+# Datasets
+data
+
+# Saved models
+checkpoints
+
+# Logs
+logs_training.csv
