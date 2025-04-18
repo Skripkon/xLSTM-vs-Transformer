@@ -25,7 +25,10 @@ dependencies:
       - tqdm
       - pytest
       - pytest-xdist
-      - numpy<2.0
+      - numpy
       - torch
       - torchvision
       - torchaudio
+      - llm-trainer
+      - xlstm
+    
