@@ -1,2 +1,0 @@
-xlstm==2.0.2
-llm-trainer==0.1.12
