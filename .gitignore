@@ -9,3 +9,5 @@ checkpoints
 
 # Logs
 logs_training.csv
+
+*.csv
