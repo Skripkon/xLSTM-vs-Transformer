@@ -6,6 +6,8 @@ data
 
 # Saved models
 checkpoints
+checkpoints_gpt
+checkpoints_xlstm
 
 # Logs
 logs_training.csv
