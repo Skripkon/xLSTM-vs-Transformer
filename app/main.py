@@ -62,7 +62,7 @@ def main(model_name: Literal["xLSTM", "GPT2"]):
         return
 
     # Text input
-    user_input = st.text_area("Enter your text:", height=150)
+    user_input = st.text_area("Enter your text:", height=70)
     n_return_sequences = 3
 
     # Generate button
@@ -81,20 +81,16 @@ def main(model_name: Literal["xLSTM", "GPT2"]):
                     for i in range(n_return_sequences):
                         continuations[i] = continuations[i][len(user_input):].strip()
 
-                    # Display the result
-                    # st.markdown("### Generated Continuations:")
                     # Create 4 columns for the continuations
                     cols = st.columns(n_return_sequences)
                     for idx, continuation in enumerate(continuations):
-                        # Trim the text to the last period
-                        last_dot_index = continuation.rfind('.')
-                        if last_dot_index != -1:
-                            trimmed_text = continuation[:last_dot_index + 1]
-                        else:
-                            trimmed_text = continuation
-                            
                         with cols[idx]:
-                            st.text_area(f"Continuation {idx + 1}", trimmed_text, height=300, disabled=True)
+                            st.markdown(f"""
+                            <div style="background-color:#0e1117; padding:10px; border-radius:8px; height:300px; overflow:auto;">
+                                <p style="color:white; white-space:pre-wrap;">{continuation + "..."}</p>
+                            </div>
+                            """, unsafe_allow_html=True)
+
             except Exception as e:
                 st.error(f"Error during generation: {str(e)}")
 
