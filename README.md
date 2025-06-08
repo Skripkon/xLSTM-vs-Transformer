@@ -5,6 +5,7 @@
 - [Key Findings](#key-findings)
 - [Technical Implementation](#technical-implementation)
 - [Reproduce experiments](#reproduce-experiments)
+- [Run Streamlit App](#run-streamlit-app)
 - [Theoretical Overview](#theoretical-overview)
   - [xLSTM vs Traditional LSTM](#xlstm-vs-traditional-lstm)
 - [References](#references)
@@ -55,6 +56,23 @@ pip install xlstm llm-trainer
 
 2. Rerun cells in `research/*.ipynb`
 
+## Run Streamlit App
+
+To run the interactive Streamlit application that demonstrates text generation with both xLSTM and GPT-2 models:
+
+1. Make sure you have the environment set up as described in the "Reproduce experiments" section
+2. Run the following command from the project root:
+
+```bash
+streamlit run app/main.py
+```
+
+The app provides an interface where you can:
+- Enter text to generate continuations
+- View multiple generated continuations side by side
+- Compare the output quality between models
+
+Note: The app requires model checkpoints to be present in the `research/checkpoints_xlstm` and `research/checkpoints_gpt` directories.
 
 ## Theoretical Overview
 
